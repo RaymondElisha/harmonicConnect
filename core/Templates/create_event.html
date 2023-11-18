@@ -1,0 +1,15 @@
+{% extends 'base.html' %} {% block content %}
+<h1>Create Event</h1>
+<form method="post" action="{% url 'create_event' %}">
+  {% csrf_token %}
+  <!-- Add form fields for event creation -->
+  <label for="event_type">Event Type:</label>
+  <input type="text" name="event_type" required />
+  <br />
+  <label for="location">Location:</label>
+  <input type="text" name="location" required />
+  <br />
+  <!-- Add other form fields -->
+  <button type="submit">Create Event</button>
+</form>
+{% endblock %}
